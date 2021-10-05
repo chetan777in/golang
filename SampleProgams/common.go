@@ -6,9 +6,12 @@ import (
 )
 
 func stringCount(input string) {
+	m := make(map[string]int)
 	for _, c := range input {
 		// Used strings count function to get actual char count, used type conversion
-		fmt.Println(string(c), "==>", strings.Count(input, string(c)))
+		//fmt.Println(string(c), "==>", strings.Count(input, string(c)))
+		m[string(c)] = strings.Count(input, string(c))
+		fmt.Println(m)
 	}
 }
 
